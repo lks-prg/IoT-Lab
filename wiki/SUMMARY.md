@@ -1,7 +1,12 @@
 # Table of contents
 
-* [Page](README.md)
+* [Co je to Arduino a k čemu slouží ?](README.md)
 
-## Group 1
+## Základy programování
 
-* [Page 1](group-1/page-1.md)
+* [IDE](zaklady-programovani/ide.md)
+* [Základní commandy](zaklady-programovani/zakladni-commandy.md)
+
+## Periferie
+
+* [LED Dioda](periferie/led-dioda.md)
