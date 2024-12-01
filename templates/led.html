@@ -1,0 +1,138 @@
+<html class=" jxlfnnh idc0_350">
+    <head></head>
+    <body>
+        <header>
+            <div class="header-left">
+                <a href="/">Domů</a>
+                <a href="/ledka">LED</a>
+            </div>
+        </header>
+        <main>
+            <h1>Ovládání integrované LED diody</h1>
+            <label class="switch">
+                <input type="checkbox" id="ledSwitch" onclick="toggleLED()">
+                <span class="slider round"></span>
+            </label>
+            <p>Ovládání diody spočívá v zapínání / vypínání pinu 13</p>
+            <div class="code-space">
+                <div class="code">
+                    void setup() { //zde se zapisuje to co se stane po spuštění arduina <br>
+
+                    pinMode(13, OUTPUT); // nastavení pinu 13 do módu OUTUPUT <br>
+                    }<br>
+                    <br>
+                    void loop() { // zde se zapisuje to co se bude opakovat po dokončení části po spuštění <br>
+                    <br>
+                    digitalWrite(13, HIGH); //pin 13 zapisuje 1<br>
+                    delay(100); // počkáme 100ms<br>
+                    digitalWrite(13, LOW); //pin 13 zapisuje 0<br>
+                    }<br>
+                </div>
+            </div><br>
+        </main>
+        <script>
+        function toggleLED() {
+        var checkBox = document.getElementById("ledSwitch");
+        if (checkBox.checked == true){
+        fetch('/led/on');
+        } else {
+        fetch('/led/off');
+        }
+        }
+        </script>
+        <style>
+        .html{
+            caret-color: transparent;
+        }
+        .code-space{
+            display: flex;
+        }
+        .code{
+            background-color: #1f1f1f;
+            width: 60%;
+            border-radius: 10px;
+            color: #fffdf2;
+            padding: 20px;
+            font-family: Consolas, 'Courier New', monospace;
+        }
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        }
+
+        .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+        main{
+        padding-left: 20px;
+        }
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        }
+
+        input:checked + .slider {
+        background-color: #00ff04;
+        }
+
+        input:checked + .slider:before {
+        transform: translateX(26px);
+        }
+
+        .slider.round {
+        border-radius: 34px;
+        }
+
+        .slider.round:before {
+        border-radius: 50%;
+        }
+        header a {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 30px;
+        margin-left: 20px;
+        }
+        header a:hover{
+        text-decoration: underline;
+        }
+        header {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        padding-right: 50px;
+        background-color: #303030;
+        border-radius: 15px;
+        margin: 20px 10px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        }
+        </style>
+    </body>
+</html>
