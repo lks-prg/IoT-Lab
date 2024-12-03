@@ -10,3 +10,4 @@
 ## Periferie
 
 * [LED Dioda](periferie/led-dioda.md)
+* [DHT11](periferie/dht11.md)
