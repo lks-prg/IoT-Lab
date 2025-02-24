@@ -6,11 +6,10 @@ LED diody (Light Emitting Diodes) jsou elektronické komponenty, které emitují
 
 My ji ovšem budeme používat velmi jednoduše jako zdroj světla.
 
-## Zapojení&#x20;
+## Zapojení
 
 ### Nevhodné zapojení
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 * Jeden kabel máme zapojen mezi GND (země nebo minus) a kratší nožičkou LED diody (Katoda)
 * Druhý kabel je zapojen do pinu 13 a druhý konec je zapojen na delší nožičku (Anoda)

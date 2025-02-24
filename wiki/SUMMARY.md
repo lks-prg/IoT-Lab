@@ -4,10 +4,10 @@
 
 ## Základy programování
 
-* [IDE](zaklady-programovani/ide.md)
-* [Základní commandy](zaklady-programovani/zakladni-commandy.md)
+* [IDE](1.ide.md)
+* [Základní commandy](2.zakladni-commandy.md)
 
 ## Periferie
 
 * [LED Dioda](periferie/led-dioda.md)
-* [DHT11](periferie/dht11.md)
+* [DHT11](teplota.md)
