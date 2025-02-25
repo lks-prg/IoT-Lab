@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "wiki/periferie/3.Teplomer/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -40,10 +40,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Průzkumník souborů"
             }
           },
           {
@@ -155,16 +156,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Otevřít rychlé přepínání": false,
+      "graph:Otevřít graf": false,
+      "canvas:Vytvořit nový canvas": false,
+      "daily-notes:Otevřít dnešní poznámku": false,
+      "templates:Vložit šablonu": false,
+      "command-palette:Otevřít paletu příkazů": false
     }
   },
   "active": "4cf9e1bb93ffbf93",
   "lastOpenFiles": [
+    "wiki/periferie/4.Ultrasonic/README.md",
+    "wiki/periferie/3.Teplomer/README.md",
+    "wiki/periferie/2.Button/README.md",
+    "README.md",
     "wiki/SUMMARY.md",
     "wiki/README.md",
     "wiki/periferie/led-dioda.md",

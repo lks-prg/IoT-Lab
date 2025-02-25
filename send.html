@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="icon" href="data:,">
+        <meta charset="UTF-8">
+        <style>
+            #cislo{
+                position: absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+                border-radius: 40px;
+                width: 500px;
+                height: 50px;
+                border : 5px solid #ffffff;
+                font-size: 20px;
+                padding-left: 10px;
+            }
+            #button{
+                position: absolute;
+                left:68%;
+                top:50%;
+                transform: translate(-50%,-50%);
+                border-radius: 40px;
+                width: 100px;
+                height: 50px;
+                background-color: transparent;
+                border: none;
+                background-color: #ffffff;
+                color: #202020;
+                font-size: 15px;
+            }
+            h1{
+                position: absolute;
+                left:50%;
+                top:40%;
+                transform: translate(-50%,-50%);
+                color: #ffffff;
+            }
+            #aktual{
+                position: absolute;
+                left:50%;
+                top:55%;
+                transform: translate(-50%,-50%);
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+            html{
+                background-color: #202020;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Zadejte číslo</h1>
+        <form action="/setCislo" method="get">
+            <input type="number" name="cislo" value="" id="cislo">
+            <input type="submit" value="Odeslat" id="button"></input>
+        </form>
+        <p id="aktual">Aktuální číslo:20</p>
+    </body>
+</html>
