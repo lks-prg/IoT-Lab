@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasonický senzor HC-SR04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #1a1a1a;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        code {
+            background-color: #1f1f1f;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #1f1f1f;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        p, h1, h2, h3, code, figcaption, li,a {
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ultrasonický senzor HC-SR04</h1>
+
+<p>Čidlo HC-SR04 je ultrazvukové čidlo, které měří vzdálenost objektů. Je to velmi užitečné pro mnoho projektů, jako jsou například robotika, automatizace a bezpečnostní systémy.</p>
+
+<p>Čidlo HC-SR04 obsahuje ultrazvukový vysílač a přijímač. Vysílač emituje ultrazvukové signály, které se odrážejí od objektů a přijímač je detekuje. Čidlo poté vypočítá vzdálenost objektu na základě času, který uplynul mezi vysláním a přijetím signálu.</p>
+
+<p>Čidlo HC-SR04 komunikuje se mikrokontroléry, jako je Arduino, pomocí jednoduchého sériového protokolu. To znamená, že je snadné jej integrovat do svých projektů a získat data o vzdálenosti.</p>
+
+<p>Použití čidla HC-SR04 s Arduinem je velmi snadné. Stačí připojit čidlo k Arduinu a napsat program, který bude číst data z čidla. Program můžete napsat pomocí knihovny NewPing, která je dostupná pro Arduino.</p>
+
+<h2>Příklad programu</h2>
+<p>Zde je příklad programu, který čte data z čidla HC-SR04:</p>
+
+<pre><code>#include &lt;NewPing.h&gt; 
+
+#define TRIGGER_PIN 2 // <-- Zde vložte pin na který jste propojili s trigger pinem
+#define ECHO_PIN 3    // <-- Zde vložte pin na který jste propojili s echo pinem
+#define MAX_DISTANCE 200 
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+void setup() {   
+    Serial.begin(9600); 
+} 
+
+void loop() {   
+    int vzdalenost = sonar.ping_cm();
+    Serial.print("Vzdálenost: ");
+    Serial.print(vzdalenost); 
+    Serial.println(" cm");   
+    delay(1000); 
+}
+</code></pre>
+
+<p>Tento program čte data z čidla HC-SR04 a tiskne je na sériový monitor.</p>
+
+<h2>Zdroje</h2>
+<ul>
+    <li><a href="https://www.laskakit.cz/arduino-ultrazvukovy-meric-vzdalenosti-hc-sr04/">LaskaKit.cz</a></li>
+    <li><a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf">Datasheet</a></li>
+    <li><a href="https://projecthub.arduino.cc/Isaac100/7cabe1ec-70a7-4bf8-a239-325b49b53cd4">Arduino Projects</a></li>
+</ul>
+
+</body>
+</html>

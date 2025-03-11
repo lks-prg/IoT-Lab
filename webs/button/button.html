@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlačítko</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #1a1a1a;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        code {
+            background-color: #1f1f1f;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #1f1f1f;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        p, h1, h2, h3, code, figcaption {
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tlačítko</h1>
+
+<p>Tlačítko je základní periferií pro Arduino, která umožňuje uživatelům interagovat s projektem. Jednoduše řečeno, tlačítko je přepínač, který mění stav z "stisknuto" na "nestisknuto" nebo naopak, lépe řečeno stavy 0 nebo 1.</p>
+
+<p>Tlačítko je velmi užitečné pro různé projekty, jako jsou například ovládání LED diod, displejů nebo dokonce malých robotů. Je to také skvělý způsob, jak začít s programováním a experimentováním s Arduinem.</p>
+
+<h2>Programování</h2>
+
+<p>Tlačítko se obvykle zapojuje do digitálního vstupu na Arduino desce a pomocí programu lze detekovat, zda je tlačítko stisknuto nebo ne. Když je tlačítko stisknuto, Arduino obdrží signál a může reagovat podle programu.</p>
+
+<h3>Ukázka funkčnosti</h3>
+
+<p>Pokud otevřeme Arduino IDE a nahrajeme tento kód:</p>
+
+<pre><code>const int tlacitkoPin = 2; // Pin na arduino, kam je tlačítko připojeno
+int stav = 0; // Proměnná pro uchování stavu tlačítka
+
+void setup() {
+  pinMode(tlacitkoPin, INPUT);
+  Serial.begin(9600); // Nastavení sériové komunikace 
+}
+
+void loop() {
+  stav = digitalRead(tlacitkoPin); // Čtení stavu zápisování do proměné stav
+  Serial.println(stav); // Odeslání stavu přes sériovou linku
+  delay(100); // Zpoždění pro snížení frekvence čtení
+}
+</code></pre>
+
+<p>A otevřeme si Serial line (viz. obrázek), která nám pomáhá vypisovat komunikaci přes USB, což nám velmi pomáhá při debugingu.</p>
+
+<figure>
+    <img src="./img/serial-line.png" alt="Serial line">
+    <figcaption>Ukázka sériové linky</figcaption>
+</figure>
+
+<figure>
+    <img src="./img/Serial-line-vyber.png" alt="Výběr sériové linky">
+    <figcaption>Výběr sériové linky</figcaption>
+</figure>
+
+<p>Můžeme si všimnout, že Arduino vypisuje jedničky, to je amatérsky řečeno stav NESTIŠTĚNO. Pokud zmáčkneme tlačítko, mělo by se stav přepnout na 0 neboli STIŠTĚNO.</p>
+
+<figure>
+    <img src="./img/serial-line-stisknuto.png" alt="Stisknuto">
+    <figcaption>Stisknuto tlačítko</figcaption>
+</figure>
+
+</body>
+</html>

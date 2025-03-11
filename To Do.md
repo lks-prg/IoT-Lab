@@ -1,0 +1,3 @@
+- Udělat teorii v formou webu, který poběží přímo na onom arduinu a bude možné zde využít i praktické ukázky
+- Udělat web v html na doméně a bude mít proklik na web na arduino - detalní popis --> js okno na hodnotu --> Přesměrování
+- 

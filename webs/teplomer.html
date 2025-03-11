@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHT11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #1a1a1a;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        code {
+            background-color: #1f1f1f;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #1f1f1f;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        p, h1, h2, h3, code, figcaption, li,a {
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<h1>DHT11</h1>
+
+<p>Čidlo DHT11 je malé zařízení, které měří teplotu a vlhkost vzduchu. Je to velmi užitečné pro mnoho projektů, jako jsou například domácí automatizace, robotika a meteorologické stanice.</p>
+
+<p>Čidlo DHT11 obsahuje senzor pro měření teploty a vlhkosti vzduchu. Je to velmi malé a lehké, takže jej můžete snadno integrovat do svých projektů. Senzor je velmi citlivý, takže může měřit velmi malé změny teploty a vlhkosti.</p>
+
+<p>Čidlo DHT11 komunikuje se mikrokontroléry, jako je Arduino, pomocí jednoduchého sériového protokolu. To znamená, že je snadné jej integrovat do svých projektů a získat data o teplotě a vlhkosti.</p>
+
+<p>Použití čidla DHT11 s Arduinem je velmi snadné. Stačí připojit čidlo k Arduinu a napsat program, který bude číst data z čidla. Program můžete napsat pomocí knihovny DHT, která je dostupná pro Arduino.</p>
+
+<h2>Příklad programu</h2>
+<p>Zde je příklad programu, který čte data z čidla DHT11:</p>
+
+<pre><code>#include &lt;DHT.h&gt;
+
+#define DHT_PIN 2
+#define DHT_TYPE DHT11
+
+DHT dht(DHT_PIN, DHT_TYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  int teplota = dht.readTemperature();
+  int vlhkost = dht.readHumidity();
+
+  Serial.print("Teplota: ");
+  Serial.print(teplota);
+  Serial.println(" °C");
+
+  Serial.print("Vlhkost: ");
+  Serial.print(vlhkost);
+  Serial.println(" %");
+
+  delay(1000);
+}
+</code></pre>
+
+<p>Tento program čte data z čidla DHT11 a tiskne je na sériový monitor.</p>
+
+<h2>Zdroje</h2>
+<ul>
+    <li>Obrázek: <a href="https://electrosome.com/wp-content/uploads/2014/10/dht-11.png">DHT11</a></li>
+</ul>
+
+<figure>
+    <img src="https://electrosome.com/wp-content/uploads/2014/10/dht-11.png" alt="DHT11 Senzor">
+    <figcaption>Čidlo DHT11</figcaption>
+</figure>
+
+</body>
+</html>

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/periferie/3.Teplomer/README.md",
+                "file": "wiki/periferie/1.Led dioda/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -166,9 +166,23 @@
   },
   "active": "4cf9e1bb93ffbf93",
   "lastOpenFiles": [
-    "wiki/periferie/4.Ultrasonic/README.md",
-    "wiki/periferie/3.Teplomer/README.md",
+    "webs/button/img/Serial-line-vyber.png",
+    "webs/button/img/serial-line-stisknuto.png",
+    "webs/button/img/serial-line.png",
+    "webs/button/button.html",
+    "webs/button/img",
+    "webs/button",
+    "webs/vzdalenost.html",
+    "webs/teplomer.html",
+    "webs/button.html",
+    "webs/led_dioda.html",
+    "webs",
+    "To Do.md",
+    "beta files/send.html",
+    "beta files/serial-outputs.py",
     "wiki/periferie/2.Button/README.md",
+    "wiki/periferie/3.Teplomer/README.md",
+    "wiki/periferie/4.Ultrasonic/README.md",
     "README.md",
     "wiki/SUMMARY.md",
     "wiki/README.md",
@@ -180,7 +194,6 @@
     "wiki/zaklady-programovani/2.zakladni-commandy.md",
     "wiki/zaklady-programovani/1.ide.md",
     "wiki/periferie/Button/img/serial-line.png",
-    "wiki/periferie/Button/img",
     "wiki/periferie/Button/img/Serial-line-vyber.png",
     "wiki/periferie/Button/img/serial-line-stisknuto.png"
   ]
